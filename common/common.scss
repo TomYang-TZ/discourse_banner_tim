@@ -1,16 +1,81 @@
+
 @import "common/foundation/mixins";
-div[class^="category-title-header"] {
-    display: none;
+
+$max-width: 600px;
+
+.display-search-banner {
+  #main-outlet {
+    padding-top: 0;
+  }
 }
-    
-.category-header div[class^="category-title-header"] {
+
+.search-banner {
+  @if $background-image != "none" {
+    background-image: url($background-image);
+  } @else {
+    background: none;
+  }
+  @if $tile-background_image == "true" {
+    background-size: auto;
+  } @else {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.custom-search-banner-wrap {
   box-sizing: border-box;
-  display: block;
-  margin-bottom: 20px;
-  text-align: $text_align;
-  width: 100%;
-  justify-content: center;
-  overflow: hidden;
+  position: relative;
+  padding: 2.5em 0 3em;
+  margin: 1em auto;
+
+  .category-heading {
+    display: none;
+  }
+
+  .category-header-widget svg.d-icon-lock{
+    @if ($show_lock_icon == "false"){
+      display:none;
+    }
+  }
+
+  .category-header-widget .category-logo.aspect-image, .category-header-widget .category-logo.aspect-image > img {
+    @if($position_logo == "top"){
+      float: none;
+      max-width: 100%;
+      margin: 0 0 0.25em 0;
+    } @else if ($position_logo == "left"){
+      float: $position_logo;
+      margin: 0 0.5em 0.25em 0;
+    } @else if ($position_logo == "right"){
+      float: $position_logo;
+      margin: 0 0 0.25em 0.5em;
+    }
+    @if($size_logo == "standard"){
+      max-height: 150px;
+    } @else if ($size_logo == "small"){
+      max-height: 50px;
+    } @else {
+      max-height: 2000px;
+    }
+  }
+
+  .category-header-widget .category-logo.aspect-image > img {
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 1em 8px 2em;
+    margin-top: 0.5em;
+  }
+
+  > div {
+    margin: 0 auto;
+    max-width: $max-width;
+  }
+
   .search-menu {
     position: relative;
     display: flex;
@@ -20,6 +85,7 @@ div[class^="category-title-header"] {
       padding-right: 4em;
     }
   }
+
   .search-input {
     flex: 1 1 auto;
     margin: 0;
@@ -30,7 +96,6 @@ div[class^="category-title-header"] {
       right: 2.25em;
     }
   }
-
   .search-icon {
     position: absolute;
     z-index: 2;
@@ -50,7 +115,7 @@ div[class^="category-title-header"] {
   .search-context,
   .results {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: $max-width;
   }
 
   .search-context {
@@ -70,7 +135,7 @@ div[class^="category-title-header"] {
     background: var(--secondary);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     position: absolute;
-    width: 600px;
+    width: $max-width;
     z-index: 9;
     margin-left: auto;
     margin-right: auto;
@@ -99,6 +164,20 @@ div[class^="category-title-header"] {
   span.keyword {
     color: var(--primary);
   }
+}
+div[class^="category-title-header"] {
+    display: none;
+}
+    
+.category-header div[class^="category-title-header"] {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 20px;
+  text-align: $text_align;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+
   @if $header_style == "box" {
     border: 2px solid $primary_low;
   } @else {
@@ -168,40 +247,5 @@ div[class^="category-title-header"] {
 }
 
 /*Hide the default Discourse category heading*/
-.category-heading {
-    display: none;
-}
 
-.category-header-widget svg.d-icon-lock{
-     @if ($show_lock_icon == "false"){
-         display:none;
-     }
-}
-
-.category-header-widget .category-logo.aspect-image, .category-header-widget .category-logo.aspect-image > img {
-    @if($position_logo == "top"){
-        float: none;
-        max-width: 100%;
-        margin: 0 0 0.25em 0;
-    } @else if ($position_logo == "left"){
-        float: $position_logo;
-        margin: 0 0.5em 0.25em 0;
-    } @else if ($position_logo == "right"){
-        float: $position_logo;
-        margin: 0 0 0.25em 0.5em;  
-    }
-    @if($size_logo == "standard"){
-        max-height: 150px;
-    } @else if ($size_logo == "small"){
-        max-height: 50px;
-    } @else {
-        max-height: 2000px;
-    }    
-}
-
-.category-header-widget .category-logo.aspect-image > img {
-    width: auto;
-    height: auto;       
-    display: inline-block;
-}
 
