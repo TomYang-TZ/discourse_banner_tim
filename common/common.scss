@@ -16,7 +16,11 @@ div[class^="category-title-header"] {
   width: 100%;
   justify-content: center;
   overflow: hidden;
-  top: 0;
+  background-repeat: no-repeat;
+  @include breakpoint(tablet) {
+    padding: 1em 8px 2em;
+    margin-top: 0.5em;
+  }
 
   @if $header_style == "box" {
     border: 2px solid $primary_low;
