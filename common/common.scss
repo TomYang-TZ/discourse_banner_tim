@@ -23,10 +23,6 @@ div[class^="category-title-header"] {
   //  margin-top: 0.5em;
   //}
 
-  > div {
-    margin: 0 auto;
-    max-width: $max-width;
-  }
 
 
   @if $header_style == "box" {
