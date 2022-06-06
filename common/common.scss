@@ -2,7 +2,7 @@ $max-width: 600px;
 div[class^="category-title-header"] {
   //display: none;
   margin: 0 auto;
-  max-width: $max-width;
+  max-width: 100%;
 }
 
 .category-header div[class^="category-title-header"] {
