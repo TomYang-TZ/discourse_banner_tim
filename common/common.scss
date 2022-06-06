@@ -1,7 +1,7 @@
 $max-width: 600px;
 div[class^="category-title-header"] {
   display: none;
-  margin: 0 auto;
+  //margin: 0 auto;
   //max-width: 100%;
 }
 
@@ -32,7 +32,7 @@ div[class^="category-title-header"] {
   }
 
   .category-title-contents {
-    padding: 20px;
+    padding: 0px;
     svg {
       height: 1.5em;
       width: 1.1em;
