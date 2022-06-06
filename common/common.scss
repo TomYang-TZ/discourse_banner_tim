@@ -7,9 +7,8 @@ div[class^="category-title-header"] {
 
 .category-header div[class^="category-title-header"] {
   box-sizing: border-box;
-  display: block;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  margin-bottom: 18px;
   text-align: $text_align;
   width: 100%;
   justify-content: center;
