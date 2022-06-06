@@ -26,7 +26,7 @@
     html(attrs, state) {
      var topMenuRoutes =component.siteSettings.top_menu.split('|').map(function(route) {return '/' + route});
         const path = window.location.pathname;
-        for route in topMenuRoutes{
+        for (route in topMenuRoutes){
             if (route === path){
               if(/^\/c\//.test(path)) {
                   if (this.state.formFactor === "widget") {
