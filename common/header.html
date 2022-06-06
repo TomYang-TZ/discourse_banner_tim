@@ -24,18 +24,16 @@
     },
 
     html(attrs, state) {
-
         const path = window.location.pathname;
 
-              if(/^\/c\//.test(path) || path === "https://omicsforum.ca/" || path === "https://omicsforum.ca/top"
-              ||path === "https://omicsforum.ca/new"||path === "https://omicsforum.ca/categories"||path === "https://omicsforum.ca/latest") {
-                  if (this.state.formFactor === "widget") {
-                    return this.panelContents();
-                  } else {
-                    return this._super(attrs, state);
-                  }
+          if(/^\/c\//.test(path) || path === "https://omicsforum.ca/" || path === "https://omicsforum.ca/top"
+          ||path === "https://omicsforum.ca/new"||path === "https://omicsforum.ca/categories"||path === "https://omicsforum.ca/latest") {
+              if (this.state.formFactor === "widget") {
+                return this.panelContents();
+              } else {
+                return this._super(attrs, state);
               }
-
+          }
     },
 
     mouseDownOutside() {
