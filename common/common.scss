@@ -7,8 +7,8 @@ div[class^="category-title-header"] {
 
 .category-header div[class^="category-title-header"] {
   box-sizing: border-box;
-  display: flex;
-  margin-bottom: 18px;
+  display: block;
+  margin-bottom: 20px;
   text-align: $text_align;
   width: 100%;
   justify-content: center;
@@ -123,6 +123,9 @@ div[class^="category-title-header"] {
 .category-header-widget .search-menu {
   position: relative;
   display: inline-block; //flex;
+  margin: 0 0.5em 0.25em 0;
+  float: none;
+  max-width: 100%;
   input[type="text"] {
     margin: 0;
     width: 100%;
