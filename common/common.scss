@@ -120,7 +120,7 @@ div[class^="category-title-header"] {
   display: inline-block;
 }
 
-.category-header-widget .search-menu {
+.category-header-widget .category-logo.aspect-image, .category-header-widget .category-logo.aspect-image > img .search-menu {
   position: relative;
   display: flex;
   input[type="text"] {
