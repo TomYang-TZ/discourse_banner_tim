@@ -1,12 +1,13 @@
 $max-width: 600px;
 div[class^="category-title-header"] {
   display: none;
-  padding-top: 0;
+  //padding-top: 0;
   //margin: 0 auto;
   //max-width: 100%;
 }
 
 .category-header div[class^="category-title-header"] {
+  padding-top: 0;
   box-sizing: border-box;
   display: block;
   margin-bottom: 18px;
