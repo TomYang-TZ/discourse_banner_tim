@@ -24,13 +24,14 @@
     },
 
     html(attrs, state) {
-        const path = window.location.pathname;
+            const path = window.location.pathname;
           let category;
 
           const controller = container.lookup('controller:navigation/category');
+
+          category = controller.get("category");
           const isException = category && settings.hide_category_exceptions.split("|").includes(category.name);
           if ( !isException){
-
               if (this.state.formFactor === "widget") {
                 return this.panelContents();
               } else {
