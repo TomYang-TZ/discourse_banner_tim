@@ -8,8 +8,7 @@ div[class^="category-title-header"] {
 .category-header div[class^="category-title-header"] {
   box-sizing: border-box;
   display: block;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-align: $text_align;
   width: 100%;
   justify-content: center;
@@ -128,7 +127,7 @@ div[class^="category-title-header"] {
   height: auto;
   input[type="text"] {
     margin: 0;
-    width: 100%;
+    width: auto;
     padding-right: 10em;
   };
 
