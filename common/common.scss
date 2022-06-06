@@ -121,14 +121,14 @@ div[class^="category-title-header"] {
 }
 
 .category-header-widget .search-menu {
-  position: relative;
+  position: center;
   display: inline-block;
   width: auto;
   height: auto;
   input[type="text"] {
     margin: 0;
-    width: auto;
-    padding-right: 10em;
+    width: 100%;
+    padding-left: 10em; //padding-right: 10em;
   };
 
 }
