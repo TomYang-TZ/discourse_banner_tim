@@ -1,6 +1,7 @@
 $max-width: 600px;
 div[class^="category-title-header"] {
   display: none;
+  padding-top: 0;
   //margin: 0 auto;
   //max-width: 100%;
 }
@@ -9,7 +10,7 @@ div[class^="category-title-header"] {
   box-sizing: border-box;
   display: block;
   margin-bottom: 18px;
-  //margin-top: 0px;
+  //margin-top: 5px;
   text-align: $text_align;
   width: 100%;
   justify-content: center;
@@ -32,7 +33,7 @@ div[class^="category-title-header"] {
   }
 
   .category-title-contents {
-    padding: 0px;
+    padding: 20px;
     svg {
       height: 1.5em;
       width: 1.1em;
