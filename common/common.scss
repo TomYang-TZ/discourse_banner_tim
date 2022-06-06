@@ -1,8 +1,8 @@
 $max-width: 600px;
 div[class^="category-title-header"] {
   display: none;
-  margin: 0 auto;
-  max-width: 100%;
+  //margin: 0 auto;
+  //max-width: 100%;
 }
 
 .category-header div[class^="category-title-header"] {
@@ -15,8 +15,8 @@ div[class^="category-title-header"] {
   justify-content: center;
   overflow: hidden;
 
-  position: relative;
-  padding: 20em 0 3em;
+  //position: relative;
+  //padding: 20em 0 3em;
   //margin: 1em auto;
   //@include breakpoint(tablet) {
   //  padding: 1em 8px 2em;
