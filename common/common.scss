@@ -121,7 +121,9 @@ div[class^="category-title-header"] {
 }
 
 .category-header-widget .search-menu {
-  position: relative;
+  position: absolute;
+  top: 70px;
+  right: 20px;
   display: inline-block;
   width: 600px;
   height: auto;
