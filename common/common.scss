@@ -149,34 +149,6 @@ div[class^="category-title-header"] {
     right: 2.25em;
   }
 }
-h1 {
-  font-size: var(--font-up-6);
-  line-height: $line-height-medium;
-  @include breakpoint(tablet) {
-    font-size: var(--font-up-4);
-  }
-}
-
-h1,
-p {
-  text-align: center;
-}
-.search-icon {
-  position: absolute;
-  z-index: 2;
-  order: 2;
-  bottom: 3px;
-  right: 0;
-  background: transparent;
-  .discourse-no-touch & {
-    &:hover {
-      background: transparent;
-      .d-icon {
-        color: var(--primary-high);
-      }
-    }
-  }
-}
 
 .search-context,
 .results {
