@@ -24,11 +24,14 @@
     },
 
     html(attrs, state) {
+        const path = window.location.pathname;
+        if(/^\/c\//.test(path)) {
               if (this.state.formFactor === "widget") {
                 return this.panelContents();
               } else {
                 return this._super(attrs, state);
               }
+           }
     },
 
     mouseDownOutside() {
