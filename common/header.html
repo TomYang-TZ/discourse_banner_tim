@@ -24,19 +24,18 @@
     },
 
     html(attrs, state) {
-     var topMenuRoutes =component.siteSettings.top_menu.split('|').map(function(route) {return '/' + route});
+
         const path = window.location.pathname;
-        for (let route in topMenuRoutes){
-            if (route === path){
-              if(/^\/c\//.test(path)) {
+
+              if(/^\/c\//.test(path) || path === "https://omicsforum.ca/" || path === "https://omicsforum.ca/top"
+              ||path === "https://omicsforum.ca/new"||path === "https://omicsforum.ca/categories"||path === "https://omicsforum.ca/latest") {
                   if (this.state.formFactor === "widget") {
                     return this.panelContents();
                   } else {
                     return this._super(attrs, state);
                   }
-                  }
-                  }
-                  }
+              }
+
     },
 
     mouseDownOutside() {
