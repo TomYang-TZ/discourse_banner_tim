@@ -1,12 +1,7 @@
 $max-width: 600px;
-
-.display-category-title-header {
-  #main-outlet {
-    padding-top: 0;
-  }
-}
 div[class^="category-title-header"] {
   display: none;
+  margin: 1em auto;
   //padding-top: 0;
   //margin: 0 auto;
   //max-width: 100%;
