@@ -8,17 +8,17 @@ $max-width: 600px;
 
   padding: 2.5em 0 3em;
   margin: 1em auto;
-  @include breakpoint(tablet) {
-    padding: 1em 8px 2em;
-    margin-top: 0.5em;
-  }
+  //@include breakpoint(tablet) {
+  //  padding: 1em 8px 2em;
+  //  margin-top: 0.5em;
+  //}
+  //
+  //> div {
+  //  margin: 0 auto;
+  //  max-width: $max-width;
+  //}
 
-  > div {
-    margin: 0 auto;
-    max-width: $max-width;
-  }
-
-  //margin-bottom: 20px;
+  margin-bottom: 20px;
   text-align: $text_align;
   width: 100%;
   justify-content: center;
