@@ -25,8 +25,9 @@
 
     html(attrs, state) {
         const path = window.location.pathname;
-
-          if(/^\/c\//.test(path)) {
+        const url = window.location.href;
+          if(/^\/c\//.test(path) || (!url.includes("/t/") && url.includes("omicsforum.ca/") || url.includes("omicsforum.ca/top") || url.includes("omicsforum.ca/new")
+          || url.includes("omicsforum.ca/categories") || url.includes("omicsforum.ca/latest")){
               if (this.state.formFactor === "widget") {
                 return this.panelContents();
               } else {
