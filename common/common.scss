@@ -9,6 +9,12 @@ div[class^="category-title-header"] {
   box-sizing: border-box;
   //display: block;
   //margin-bottom: 20px;
+
+  #main-outlet {
+    padding-top: 0;
+  }
+
+  
   text-align: $text_align;
   width: 100%;
   justify-content: center;
