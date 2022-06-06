@@ -206,7 +206,7 @@
       helper.widget.appEvents.on('page:changed', () => {
           helper.widget.scheduleRerender();
       });
-      const searchWidget = helper.widget;
+    const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
       if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
