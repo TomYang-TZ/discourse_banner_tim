@@ -28,7 +28,8 @@
           let category;
 
           const controller = container.lookup('controller:navigation/category');
-          if ( controller.get("category")){
+          const isException = category && settings.hide_category_exceptions.split("|").includes(category.name);
+          if ( !isException){
 
               if (this.state.formFactor === "widget") {
                 return this.panelContents();
