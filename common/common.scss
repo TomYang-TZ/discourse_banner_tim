@@ -1,4 +1,4 @@
-$max-width: 600px;
+$max-width: 800px;
 div[class^="category-title-header"] {
   display: none;
   //margin: 0 auto;
@@ -125,7 +125,7 @@ div[class^="category-title-header"] {
   top: 165px;
   right: 620px;
   display: inline-block;
-  width: 600px;
+  width: $max-width;
   height: auto;
   input[type="text"] {
     margin: 0;
