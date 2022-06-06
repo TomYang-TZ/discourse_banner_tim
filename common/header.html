@@ -6,10 +6,10 @@
   let lockIcon = iconNode('lock');
 
 
- const searchMenuWidget = api.container.factoryFor("widget:search-menu");
+ const searchMenuWidget = api.container.factoryFor("widget:search-menu2");
   const corePanelContents = searchMenuWidget.class.prototype["panelContents"];
 
-  api.reopenWidget("search-menu", {
+  api.reopenWidget("search-menu2", {
     buildKey(attrs) {
       let type = attrs.formFactor || "menu";
       return `search-${type}`;
@@ -26,8 +26,7 @@
     html(attrs, state) {
         const path = window.location.pathname;
 
-          if(/^\/c\//.test(path) || path === "https://omicsforum.ca/" || path === "https://omicsforum.ca/top"
-          || path === "https://omicsforum.ca/new" || path === "https://omicsforum.ca/categories" || path === "https://omicsforum.ca/latest") {
+          if(/^\/c\//.test(path)) {
               if (this.state.formFactor === "widget") {
                 return this.panelContents();
               } else {
@@ -94,18 +93,18 @@
       }
 
       contents = contents.concat(...corePanelContents.call(this));
-      let results = contents.find((w) => w.name === "search-menu-results");
+      let results = contents.find((w) => w.name === "search-menu2-results");
       if (results && results.attrs.results) {
-        $(".search-menu.search-header").addClass("has-results");
+        $(".search-menu2.search-header").addClass("has-results");
       } else {
-        $(".search-menu.search-header").removeClass("has-results");
+        $(".search-menu2.search-header").removeClass("has-results");
       }
       if (formFactor === "menu" || showHeaderResults) {
         return contents;
       } else {
         return contents.filter((widget) => {
           return (
-            widget.name !== "search-menu-results" &&
+            widget.name !== "search-menu2-results" &&
             widget.name !== "search-context"
           );
         });
@@ -214,7 +213,7 @@
     const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
       if (!searchMenuVisible && !searchWidget.attrs.topic) {
-      return helper.attach("search-menu", {
+      return helper.attach("search-menu2", {
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
