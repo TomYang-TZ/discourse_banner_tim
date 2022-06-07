@@ -28,7 +28,7 @@
         const path = window.location.pathname;
             if(/^\/c\//.test(path)){
               if (this.state.formFactor === "widget") {
-                return this.panelContents();
+                return ul('id',"category-header")+ this.panelContents();
               } else {
                 return this._super(attrs, state);
               }
@@ -197,7 +197,7 @@
                   h('h1', category.name)
                   ]),
                   h('div.category-title-description',catDesc())
-                  ]),ul('id',"category-header"),
+                  ]),
                   );
               }
           } else {
