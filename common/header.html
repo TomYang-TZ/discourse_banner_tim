@@ -212,10 +212,10 @@
       helper.widget.appEvents.on('page:changed', () => {
           helper.widget.scheduleRerender();
       });
-      const path = window.location.pathname;
+
     const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
-      if (!searchMenuVisible && !searchWidget.attrs.topic && /^\/c\//.test(path)) {
+      if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
