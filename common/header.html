@@ -6,8 +6,8 @@
   let lockIcon = iconNode('lock');
 
 
- const searchMenuWidget = api.container.factoryFor("widget:search-menu");
-  const corePanelContents = searchMenuWidget.class.prototype["panelContents"];
+ const searchMenuWidget2 = api.container.factoryFor("widget:search-menu");
+  const corePanelContents2 = searchMenuWidget2.class.prototype["panelContents"];
 
   api.reopenWidget("search-menu", {
     buildKey(attrs) {
@@ -92,7 +92,7 @@
         );
       }
 
-      contents = contents.concat(...corePanelContents.call(this));
+      contents = contents.concat(...corePanelContents2.call(this));
       let results = contents.find((w) => w.name === "search-menu-results");
       if (results && results.attrs.results) {
         $(".search-menu.search-header").addClass("has-results");
