@@ -166,6 +166,18 @@ div[class^="category-title-header"] {
     }
   }
 }
+h1 {
+  font-size: var(--font-up-6);
+  line-height: $line-height-medium;
+  @include breakpoint(tablet) {
+    font-size: var(--font-up-4);
+  }
+}
+
+h1,
+p {
+  text-align: center;
+}
 
  .search-context,
 .results {

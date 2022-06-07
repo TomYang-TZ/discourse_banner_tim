@@ -1,6 +1,5 @@
 <script type="text/discourse-plugin" version="0.8">
-import { apiInitializer } from "discourse/lib/api";
-import { logSearchLinkClick } from "discourse/lib/search";
+  const {logSearchLinkClick} = require("discourse/lib/search");
 
   const container = Discourse.__container__;
   const { h } = require('virtual-dom');
