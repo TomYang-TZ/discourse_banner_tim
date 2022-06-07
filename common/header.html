@@ -28,7 +28,7 @@
         const path = window.location.pathname;
             if(/^\/c\//.test(path)){
               if (this.state.formFactor === "widget") {
-                return ul('id',"category-header")+ this.panelContents();
+                return this.panelContents();
               } else {
                 return this._super(attrs, state);
               }
@@ -188,7 +188,7 @@
                       "attributes" : {
                           "style" : getHeaderStyle()
                       }
-                  }, h('div.category-title-contents', [
+                  }, ul('id',"category-header"), h('div.category-title-contents', [
                   h('div.category-logo.aspect-image', logoImg()),
                   h('div.category-title-name', [
                   ifParentProtected(),
