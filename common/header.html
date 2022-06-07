@@ -10,7 +10,7 @@
  const searchMenuWidget2 = api.container.factoryFor("widget:search-menu");
   const corePanelContents2 = searchMenuWidget2.class.prototype["panelContents"];
 
-  api.reopenWidget("search-menu", {
+  api.reopenWidget("search-menu2", {
     buildKey(attrs) {
       let type = attrs.formFactor || "menu";
       return `search-${type}`;
@@ -216,7 +216,7 @@
     const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
       if (!searchMenuVisible && !searchWidget.attrs.topic) {
-      return helper.attach("search-menu", {
+      return helper.attach("search-menu2", {
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
