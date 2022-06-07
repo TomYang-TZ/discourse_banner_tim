@@ -9,7 +9,7 @@
  const searchMenuWidget2 = api.container.factoryFor("widget:search-menu");
   const corePanelContents2 = searchMenuWidget2.class.prototype["panelContents"];
 
-  api.reopenWidget("search-menu", {
+  api.reopenWidget("search-menu2", {
     buildKey(attrs) {
       let type = attrs.formFactor || "menu";
       return `search-${type}`;
@@ -26,13 +26,13 @@
     html(attrs, state) {
         const path = window.location.pathname;
         const url = window.location.href;
-          if(/^\/c\//.test(path)){
+
               if (this.state.formFactor === "widget") {
                 return this.panelContents();
               } else {
                 return this._super(attrs, state);
               }
-          }
+
     },
 
     mouseDownOutside() {
@@ -95,16 +95,16 @@
       contents = contents.concat(...corePanelContents2.call(this));
       let results = contents.find((w) => w.name === "search-menu-results");
       if (results && results.attrs.results) {
-        $(".search-menu.search-header").addClass("has-results");
+        $(".search-menu2.search-header").addClass("has-results");
       } else {
-        $(".search-menu.search-header").removeClass("has-results");
+        $(".search-menu2.search-header").removeClass("has-results");
       }
       if (formFactor === "menu" || showHeaderResults) {
         return contents;
       } else {
         return contents.filter((widget) => {
           return (
-            widget.name !== "search-menu-results" &&
+            widget.name !== "search-menu2-results" &&
             widget.name !== "search-context"
           );
         });
@@ -202,7 +202,7 @@
               }
           } else {
               $("body").removeClass("category-header");
-              $("body").removeClass("search-menu");
+<!--              $("body").removeClass("search-menu");-->
 
           }
       }
@@ -215,7 +215,7 @@
     const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
       if (!searchMenuVisible && !searchWidget.attrs.topic) {
-      return helper.attach("search-menu", {
+      return helper.attach("search-menu2", {
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
